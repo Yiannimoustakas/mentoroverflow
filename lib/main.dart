@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mentoroverflow/widgets/chat_screen/chat_page.dart';
 
 import './search.dart';
 
