@@ -25,24 +25,26 @@ class ChatScreenState extends State<ChatScreen> {
       data: IconThemeData(color: Colors.blue),
       child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 8.0),
-        child: Row(
-          children: <Widget>[
-            Flexible(
-              child: TextField(
-                decoration: InputDecoration.collapsed(
-                    hintText: "Enter your message"),
-                controller: textEditingController,
-                onSubmitted: _handleSubmit,
+        child: SafeArea(
+          child: Row(
+            children: <Widget>[
+              Flexible(
+                child: TextField(
+                  decoration: InputDecoration.collapsed(
+                      hintText: "Enter your message"),
+                  controller: textEditingController,
+                  onSubmitted: _handleSubmit,
+                ),
               ),
-            ),
-            Container(
-              margin: const EdgeInsets.symmetric(horizontal: 8.0),
-              child: IconButton(
-                icon: Icon(Icons.send),
-                onPressed: () => _handleSubmit(textEditingController.text),
-              ),
-            )
-          ],
+              Container(
+                margin: const EdgeInsets.symmetric(horizontal: 8.0),
+                child: IconButton(
+                  icon: Icon(Icons.send),
+                  onPressed: () => _handleSubmit(textEditingController.text),
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
@@ -53,11 +55,14 @@ class ChatScreenState extends State<ChatScreen> {
     return Column(
         children: <Widget>[
           Flexible(
-            child: ListView.builder(
-              padding: EdgeInsets.all(8.0),
-              reverse: true,
-              itemBuilder:(_,int index)=>_messages[index],
-              itemCount: _messages.length, 
+            child: SafeArea(
+              bottom: false,
+              child: ListView.builder(
+                padding: EdgeInsets.all(8.0),
+                reverse: true,
+                itemBuilder:(_,int index)=>_messages[index],
+                itemCount: _messages.length, 
+              ),
             ),
           ),
           Divider(height: 1.0,),

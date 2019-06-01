@@ -10,9 +10,10 @@ class ChatPage extends StatelessWidget {
       appBar: AppBar(
         title: Text("Chat App"),
       ),
-      body: SafeArea(
-        child: ChatScreen()
-      )
+      body: ChatScreen()
+      // SafeArea(
+      //   child: 
+      // )
     );
   }
 }
