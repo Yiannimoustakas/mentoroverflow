@@ -197,18 +197,6 @@ abstract class Styles {
     right: BorderSide(color: Color(0xff606060)),
   );
 
-  static const uncheckedIcon = IconData(
-    0xf372,
-    fontFamily: CupertinoIcons.iconFont,
-    fontPackage: CupertinoIcons.iconFontPackage,
-  );
-
-  static const checkedIcon = IconData(
-    0xf373,
-    fontFamily: CupertinoIcons.iconFont,
-    fontPackage: CupertinoIcons.iconFontPackage,
-  );
-
   static const transparentColor = Color(0x00000000);
 
   static const Color settingsMediumGray = Color(0xffc7c7c7);
