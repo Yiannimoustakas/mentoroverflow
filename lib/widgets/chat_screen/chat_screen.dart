@@ -15,7 +15,11 @@ class ChatScreenState extends State<ChatScreen> {
   void _handleSubmit(String text) {
     textEditingController.clear();
     ChatMessage chatMessage = ChatMessage(
-      Message(message: text)
+      Message(
+        message: text,
+        senderImage: 'https://avatars2.githubusercontent.com/u/29531982?s=400&v=4',
+        senderName: 'Bob the newbie'
+    )
     );
     setState(() {
           //used to rebuild our widget
