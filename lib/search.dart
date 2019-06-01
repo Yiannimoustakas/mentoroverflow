@@ -56,7 +56,7 @@ class CustomSearchDelegate extends SearchDelegate {
 
   @override
   Widget buildResults(BuildContext context) {
-    return Text('Showing result page');
+    return Profile;
   }
 
   @override
@@ -143,7 +143,10 @@ class _MOSearchState extends State<MOSearch> {
             itemCount: 20,
             itemBuilder: (ctx, idx) {
               return ListTile(
-                title: Text('testing: $idx')
+                title: Text('testing: $idx'),
+                onTap: (){
+                  Navigator.pushNamed(context, '/profile');
+                },
               );
             },
           )
