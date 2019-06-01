@@ -26,8 +26,11 @@ class ListScreen extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            const ListTile(
-              leading: Icon(Icons.assistant),
+            ListTile(
+              leading: new CircleAvatar(
+                backgroundColor: Colors.blue,
+                child: new Image(image: new AssetImage("assets/flutter.png")),
+              ),
               title: Text('Flutter Mentor', style: Styles.headlineText),
               subtitle: Text('Learn Flutter is easy and fun.'),
             ),
@@ -35,18 +38,17 @@ class ListScreen extends StatelessWidget {
               child: ButtonBar(
                 children: <Widget>[
                   FlatButton(
-                    child: const Text('Talk to Mentor'),
-                    onPressed: () { /* ... */ },
-                  ),
-                  FlatButton(
-                    child: const Text('Details'),
-                    onPressed: () { /* ... */ },
+                    child: const Text('Find Mentor'),
+                    onPressed: () { Navigator.pushNamed(context, '/mentor_list');  },
                   ),
                 ],
               ),
             ),
-            const ListTile(
-              leading: Icon(Icons.assistant),
+            ListTile(
+              leading: new CircleAvatar(
+                backgroundColor: Colors.blue,
+                child: new Image(image: new AssetImage("assets/dart.jpg")),
+              ),
               title: Text('Dart Mentor', style: Styles.headlineText),
               subtitle: Text('Learn Dart'),
             ),
@@ -54,37 +56,35 @@ class ListScreen extends StatelessWidget {
               child: ButtonBar(
                 children: <Widget>[
                   FlatButton(
-                    child: const Text('Talk to Mentor'),
-                    onPressed: () { /* ... */ },
-                  ),
-                  FlatButton(
-                    child: const Text('Details'),
-                    onPressed: () { /* ... */ },
+                    child: const Text('Find Mentor'),
+                    onPressed: () { Navigator.pushNamed(context, '/mentor_list'); },
                   ),
                 ],
               ),
             ),
-            const ListTile(
-              leading: Icon(Icons.assistant),
-              title: Text('JavaScript Mentor', style: Styles.headlineText),
-              subtitle: Text('Learn JavaScript.'),
+            ListTile(
+              leading: new CircleAvatar(
+                backgroundColor: Colors.blue,
+                child: new Image(image: new AssetImage("assets/kotlin.png")),
+              ),
+              title: Text('Kotlin Mentor', style: Styles.headlineText),
+              subtitle: Text('Learn Kotlin.'),
             ),
             ButtonTheme.bar( // make buttons use the appropriate styles for cards
               child: ButtonBar(
                 children: <Widget>[
                   FlatButton(
-                    child: const Text('Talk to Mentor'),
-                    onPressed: () { /* ... */ },
-                  ),
-                  FlatButton(
-                    child: const Text('Details'),
-                    onPressed: () { /* ... */ },
+                    child: const Text('Find Mentor'),
+                    onPressed: () { Navigator.pushNamed(context, '/mentor_list');  },
                   ),
                 ],
               ),
             ),
-            const ListTile(
-              leading: Icon(Icons.assistant),
+            ListTile(
+              leading: new CircleAvatar(
+                backgroundColor: Colors.blue,
+                child: new Image(image: new AssetImage("assets/react.png")),
+              ),
               title: Text('React Mentor', style: Styles.headlineText),
               subtitle: Text('Learn React.'),
             ),
@@ -92,31 +92,26 @@ class ListScreen extends StatelessWidget {
               child: ButtonBar(
                 children: <Widget>[
                   FlatButton(
-                    child: const Text('Talk to Mentor'),
-                    onPressed: () { /* ... */ },
-                  ),
-                  FlatButton(
-                    child: const Text('Details'),
-                    onPressed: () { /* ... */ },
+                    child: const Text('Find Mentor'),
+                    onPressed: () { Navigator.pushNamed(context, '/mentor_list');  },
                   ),
                 ],
               ),
             ),
-            const ListTile(
-              leading: Icon(Icons.assistant),
-              title: Text('Angular Mentor', style: Styles.headlineText),
-              subtitle: Text('Learn Angular.'),
+            ListTile(
+              leading: new CircleAvatar(
+                backgroundColor: Colors.blue,
+                child: new Image(image: new AssetImage("assets/swift.png")),
+              ),
+              title: Text('Swift Mentor', style: Styles.headlineText),
+              subtitle: Text('Learn Swift.'),
             ),
             ButtonTheme.bar( // make buttons use the appropriate styles for cards
               child: ButtonBar(
                 children: <Widget>[
                   FlatButton(
-                    child: const Text('Talk to Mentor'),
-                    onPressed: () { /* ... */ },
-                  ),
-                  FlatButton(
-                    child: const Text('Details'),
-                    onPressed: () { /* ... */ },
+                    child: const Text('Find Mentor'),
+                    onPressed: () { Navigator.pushNamed(context, '/mentor_list'); },
                   ),
                 ],
               ),
