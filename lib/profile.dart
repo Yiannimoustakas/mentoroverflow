@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:mentoroverflow/styles.dart';
 
@@ -48,6 +50,8 @@ class _ProfileState extends State<Profile> {
     // The Flutter framework has been optimized to make rerunning build methods
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
+
+    var realidx = Random().nextInt(10).toInt();
     return Scaffold(
         appBar: AppBar(
           // Here we take the value from the Profile object that was created by
@@ -61,7 +65,7 @@ class _ProfileState extends State<Profile> {
             children: <Widget>[
               CircleAvatar(
                 backgroundImage:
-                    NetworkImage("https://placekitten.com/g/200/200"),
+                    NetworkImage("https://randomuser.me/api/portraits/men/$realidx.jpg"),
                 maxRadius: 60,
               ),
               Padding(padding: const EdgeInsets.only(top: 4, bottom: 16)),
