@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mentoroverflow/data/messageData.dart';
+import 'package:mentoroverflow/models/message.dart';
 import 'package:mentoroverflow/widgets/chat_screen/chat_message.dart';
 
 class ChatScreen extends StatefulWidget {
@@ -8,16 +10,17 @@ class ChatScreen extends StatefulWidget {
 
 class ChatScreenState extends State<ChatScreen> {
   final TextEditingController textEditingController = TextEditingController();
-  final List<ChatMessage> _messages= <ChatMessage>[];
-
+  final List<ChatMessage> _messages = sampleMessages.map( (message) => ChatMessage(message)).toList();
 
   void _handleSubmit(String text) {
     textEditingController.clear();
-    ChatMessage chatMessage = ChatMessage(text: text);
+    ChatMessage chatMessage = ChatMessage(
+      Message(message: text)
+    );
     setState(() {
           //used to rebuild our widget
           _messages.insert(0, chatMessage);
-        });
+    });
   }
 
   Widget _textComposerWidget() {
