@@ -1,3 +1,4 @@
+import 'package:mentoroverflow/models/developer.dart';
 import 'package:mentoroverflow/models/message.dart';
 
 const List<Message>sampleMessages = [
@@ -16,4 +17,10 @@ const List<Message>sampleMessages = [
     senderImage: 'https://avatars2.githubusercontent.com/u/29531982?s=400&v=4',
     senderName: 'Bob the newbie'
   ),
+];
+
+
+const List<Developer> developers = [
+  Developer(devKey: 'fred', devName: 'Fred the Flutter Dev'),
+  Developer(devKey: 'bob', devName: 'Bob the newbie')
 ];

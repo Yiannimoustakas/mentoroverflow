@@ -66,7 +66,7 @@ class _ProfileState extends State<Profile> {
               ),
               Padding(padding: const EdgeInsets.only(top: 4, bottom: 16)),
               Text(
-                "User name",
+                widget.title,
                 style: Theme.of(context).textTheme.title,
               ),
               Padding(padding: const EdgeInsets.only(top: 4, bottom: 16)),

@@ -2,6 +2,9 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:mentoroverflow/data/messageData.dart';
+import 'package:mentoroverflow/models/developer.dart';
+import 'package:mentoroverflow/profile.dart';
 
 class MOSearch extends StatefulWidget {
   
@@ -56,7 +59,7 @@ class CustomSearchDelegate extends SearchDelegate {
 
   @override
   Widget buildResults(BuildContext context) {
-    return Profile;
+    return Profile(title: '');
   }
 
   @override
@@ -74,7 +77,8 @@ class CustomSearchDelegate extends SearchDelegate {
       query: '', 
       onSelected: (String sugg) {
         debugPrint('here i am $sugg');
-        showResults(context);
+        Navigator.pushNamed(context, '/profile');
+        // showResults(context);
       }
     );
   }
@@ -140,12 +144,15 @@ class _MOSearchState extends State<MOSearch> {
             ];
           },
           body: ListView.builder(
-            itemCount: 20,
+            itemCount: 10,
             itemBuilder: (ctx, idx) {
+              
+              Developer dev = (idx < 2) ? developers[idx]: Developer(devKey: '$idx', devName: 'DevName - ${idx}');
+              
               return ListTile(
-                title: Text('testing: $idx'),
+                title: Text('DEV: ${dev.devName}'),
                 onTap: (){
-                  Navigator.pushNamed(context, '/profile');
+                  Navigator.pushNamed(context, '/profile/${dev.devKey}');
                 },
               );
             },

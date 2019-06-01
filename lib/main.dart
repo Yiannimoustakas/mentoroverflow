@@ -29,8 +29,18 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => HomeScreen(),
         '/mentor_list': (context) => MOSearch(),
-        '/profile': (context) => Profile(title: 'Profile'),
-        '/chat' : (context) => ChatPage()
+        '/chat' : (context) => ChatPage(),
+        '/profile/fred': (context) => Profile(title: 'Fred'),
+        '/profile/bob': (context) => Profile(title: 'Bob'),
+        '/profile/1': (context) => Profile(title: '1'),
+        '/profile/2': (context) => Profile(title: '2'),
+        '/profile/3': (context) => Profile(title: '3'),
+        '/profile/4': (context) => Profile(title: '4'),
+        '/profile/5': (context) => Profile(title: '5'),
+        '/profile/6': (context) => Profile(title: '6'),
+        '/profile/7': (context) => Profile(title: '7'),
+        '/profile/8': (context) => Profile(title: '8'),
+
       },
     );
   }
