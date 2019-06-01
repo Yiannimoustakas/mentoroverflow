@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mentoroverflow/screens/home.dart';
 
 import 'package:mentoroverflow/widgets/chat_screen/chat_page.dart';
 import './search.dart';
@@ -24,7 +25,13 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.purple,
       ),
-      home: MOSearch(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => HomeScreen(),
+        '/mentor_list': (context) => MOSearch(),
+        '/profile': (context) => Profile(title: 'Profile'),
+        '/chat' : (context) => ChatPage()
+      },
     );
   }
 }
