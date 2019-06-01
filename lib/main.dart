@@ -5,6 +5,8 @@ import 'package:mentoroverflow/widgets/chat_screen/chat_page.dart';
 import './search.dart';
 import 'package:mentoroverflow/profile.dart';
 
+import 'login.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -27,7 +29,7 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) => HomeScreen(),
+        '/': (context) => Home(onLogout: () {}, onSignin: () {} ),
         '/mentor_list': (context) => MOSearch(),
         '/chat' : (context) => ChatPage(),
         '/profile/fred': (context) => Profile(title: 'Fred'),
