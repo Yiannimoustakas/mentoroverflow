@@ -2,7 +2,6 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
 
 abstract class Styles {
@@ -150,12 +149,20 @@ abstract class Styles {
     fontWeight: FontWeight.normal,
   );
 
-  static const triviaFinishedBigText = TextStyle(
-    color: Color.fromRGBO(0, 0, 0, 0.9),
+  static const labelText = TextStyle(
+    color: Color.fromRGBO(176, 176, 176, 1.0),
     fontFamily: 'NotoSans',
-    fontSize: 48.0,
+    fontSize: 20.0,
     fontStyle: FontStyle.normal,
-    fontWeight: FontWeight.normal,
+    fontWeight: FontWeight.bold,
+  );
+  
+  static const chipText = TextStyle(
+    fontSize: 18.0,
+  );
+  
+  static const labelValue = TextStyle(
+    fontSize: 18.0,
   );
 
   static const appBackground = Color(0xffd0d0d0);
@@ -204,14 +211,6 @@ abstract class Styles {
 
   static const transparentColor = Color(0x00000000);
 
-  static const shadowColor = Color(0xa0000000);
-
-  static const shadowGradient = LinearGradient(
-    begin: Alignment.topCenter,
-    end: Alignment.bottomCenter,
-    colors: [transparentColor, shadowColor],
-  );
-
   static const Color settingsMediumGray = Color(0xffc7c7c7);
 
   static const Color settingsItemPressed = Color(0xffd9d9d9);
@@ -225,28 +224,4 @@ abstract class Styles {
   static const Color iconBlue = Color(0xff0000ff);
 
   static const Color iconGold = Color(0xffdba800);
-
-  static const preferenceIcon = IconData(
-    0xf443,
-    fontFamily: CupertinoIcons.iconFont,
-    fontPackage: CupertinoIcons.iconFontPackage,
-  );
-
-  static const calorieIcon = IconData(
-    0xf3bb,
-    fontFamily: CupertinoIcons.iconFont,
-    fontPackage: CupertinoIcons.iconFontPackage,
-  );
-
-  static const checkIcon = IconData(
-    0xf383,
-    fontFamily: CupertinoIcons.iconFont,
-    fontPackage: CupertinoIcons.iconFontPackage,
-  );
-
-  static const servingInfoBorderColor = Color(0xffb0b0b0);
-
-  static const ColorFilter desaturatedColorFilter =
-  // 222222 is a random color that has low color saturation.
-  ColorFilter.mode(Color(0xFF222222), BlendMode.saturation);
 }
