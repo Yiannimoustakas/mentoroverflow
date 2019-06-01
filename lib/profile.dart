@@ -99,6 +99,23 @@ class _ProfileState extends State<Profile> {
                   Text("Primary Language", style: Styles.labelText),
                   Text("English", style: Styles.labelValue)
                 ],
+              ),
+              Padding(padding: _standardPadding),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Text("Chat", style: Styles.labelText),
+                  ButtonTheme.bar( // make buttons use the appropriate styles for cards
+                    child: ButtonBar(
+                      children: <Widget>[
+                        FlatButton(
+                          child: const Text('Start your chat now with your mentor'),
+                          onPressed: () { Navigator.pushNamed(context, '/chat');  },
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
               )
             ],
           ),
